@@ -30,7 +30,10 @@ export const changeWord = (string, word, newWord) => {
  * @param {number} length
  * @returns {string}
  */
-export const truncate = (string, length) => {};
+export const truncate = (string, length) => {
+    string = string.slice(0,length);
+    return string;
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -43,7 +46,16 @@ export const truncate = (string, length) => {};
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbols = (string, symbol) => {};
+export const quantityOfSymbols = (string, symbol) => {
+    let count = string.length;
+    let result = 0;
+    for(i = 0; i <= count; i++) {
+        if (string.toLowerCase().charAt(i) === symbol) {
+            result++;
+        }
+    }
+    return result;
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
