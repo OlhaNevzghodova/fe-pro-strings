@@ -75,10 +75,9 @@ export const quantityOfSymbols = (string, symbol) => {
 export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     let count = 0;
     let result = string.toLowerCase().indexOf(symbol);
-    while (true) {
+    while (result !== -1) {
         count++;
         result = string.toLowerCase().indexOf(symbol, result + 1);
-        if (result === -1) break;
     }
     return count;
 };
